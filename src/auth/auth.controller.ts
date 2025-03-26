@@ -9,7 +9,7 @@ import {
 import { Prisma } from '@prisma/client';
 import { AuthService } from './auth.service';
 
-// Auth
+// Auth Rota principal
 @Controller('auth')
 export class AuthController {
   @Inject()
