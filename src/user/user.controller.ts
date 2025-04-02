@@ -16,6 +16,7 @@ import { AuthGuard } from 'src/auth/auth.guard';
 export class UserController {
   constructor(private userService: UserService) {}
 
+  // Sem AuthGuard apenas para criar um usuário
   @Post()
   async signupUser(
     @Body() userData: Prisma.UserCreateInput,
