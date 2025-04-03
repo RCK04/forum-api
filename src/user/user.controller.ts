@@ -24,12 +24,14 @@ export class UserController {
     return this.userService.createUser(userData);
   }
 
+  // AuthGuard apenas para autenticados
   @UseGuards(AuthGuard)
   @Get(':id')
   async getUser(@Param('id') id: string): Promise<UserModel> {
     return this.userService.user({ id: Number(id) });
   }
 
+  // AuthGuard apenas para autenticados
   @UseGuards(AuthGuard)
   @Put(':id')
   async updateUser(
@@ -42,6 +44,7 @@ export class UserController {
     });
   }
 
+  // AuthGuard apenas para autenticados
   @UseGuards(AuthGuard)
   @Delete(':id')
   async deleteUser(@Param('id') id: string): Promise<UserModel> {
