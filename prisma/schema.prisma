@@ -13,7 +13,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
+// Formato do User
 model User {
   id        Int   @default(autoincrement()) @id
   email     String   @unique
